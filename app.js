@@ -1,10 +1,4 @@
 
-//JQuery for flipping over function on the image
-$('.f1_container').click(function () {
-    $(this).toggleClass('active');
-});
-
-
 
 
 
