@@ -6,10 +6,10 @@
 var imgArray = new Array();
 
 imgArray[0] = new Image();
-imgArray[0].src = './Images/imageA.png';
+imgArray[0].src = './Images/imageB.png';
 
 imgArray[1] = new Image();
-imgArray[1].src = './Images/imageB.png';
+imgArray[1].src = './Images/imageA.png';
 
 imgArray[2] = new Image();
 imgArray[2].src = './Images/imageC.png';
@@ -18,10 +18,10 @@ imgArray[3] = new Image();
 imgArray[3].src = './Images/imageD.png';
 
 imgArray[4] = new Image();
-imgArray[4].src = './Images/imageE.png';
+imgArray[4].src = './Images/imageF.png';
 
 imgArray[5] = new Image();
-imgArray[5].src = './Images/imageF.png';
+imgArray[5].src = './Images/imageE.png';
 
 imgArray[6] = new Image();
 imgArray[6].src = './Images/imageG.png';
