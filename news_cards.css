@@ -41,6 +41,7 @@ a{
   font-size: 10px;
 }
 
+
 .flip-card {
     background-color: transparent;
     width: 480px;
@@ -80,6 +81,7 @@ a{
     background-color: #bbb;
     color: black;
 }
+
   
 .flip-card-back {
     background-color: #EBD444;
@@ -125,6 +127,10 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#mid{
+  font-size: 1.5em;
 }
 
 
