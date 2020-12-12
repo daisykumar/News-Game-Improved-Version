@@ -10,7 +10,6 @@ body{
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
-    font-size: 28px;
     margin: 0px 20px;
     padding: 0px;
 }
@@ -26,11 +25,25 @@ nav{
     margin-left: auto;
     margin-right: auto;
 }
+#level1{
+  font-size: 1.5em;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 
+#Flip{
+  font-size: 1em;
+}
+a{
+  color: blue;
+  text-transform: underline;
+  cursor: pointer;
+  font-size: 10px;
+}
 
 .flip-card {
     background-color: transparent;
-    width: 450px;
+    width: 480px;
     height: 280px;
     perspective: 1000px;
     margin: 20px;
@@ -81,53 +94,55 @@ nav{
 
   .flip-card-back.true{
     background-color: #2DEB8D;
-
   }
 
 #true{
-  color: #DA6959;
   padding: 0px;
-  margin: 0px;
+  margin: 2px;
+  font-size: 16px;
+}
+span{
+  color: #DA6959;
+  font-size: 20px
 }
 #fake{
   padding: 0px;
-  margin: 0px;
-  color: #292828;
+  margin: 2px;
+  color: #3c3a3a;
+  font-size: 16px;
 }
+
 #rock, #luck{
   padding: 0px;
-  margin: 5px;
-  font-size: 25px;
+  margin: 0px;
+  font-size: 1px;
 }
 #luck{
   color: #746f6f;
 }
-#button-shuffle{
+#button-medium{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#Flip{
-  font-size: 20px;
-}
+
 button{
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 70px;
   color: #ffffff;
   padding: 15px 10px;
-  margin: 10px 0px;
-  border-radius: 10px;
+  margin: 10px 0px 50px 0px;
+  border-radius: 50%;
   background-color: #0E949E;
-  position: relative;
-  font-size: 0.5em;
-  font-weight: lighter;
+  font-weight: medium;
+  font-size: 1.2em;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 2px 2px 5px #0E949E;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
 
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -135,7 +150,40 @@ button{
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
+
+  -webkit-animation: glowing 2500ms infinite;
+    -moz-animation: glowing 2500ms infinite;
+    -o-animation: glowing 2500ms infinite;
+    animation: glowing 2500ms infinite;
+
 }
+
+
+@-webkit-keyframes glowing {
+  0% { background-color:  #146469; -webkit-border-radius: 0 0 3px #146469; }
+  50% { background-color: #0E949E; -webkit-box-shadow: 0 0 10px #0E949E; }
+  100% { background-color: #146469; -webkit-box-shadow: 0 0 3px  #146469; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
+  50% { background-color:#0E949E; -moz-box-shadow: 0 0 40px #0E949E;; }
+  100% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+  50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
+  100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+}
+
+@keyframes glowing {
+  0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+  50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
+  100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+}
+
+
 a{
   text-decoration: none;
 }

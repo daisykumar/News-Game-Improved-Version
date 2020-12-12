@@ -50,12 +50,7 @@ img{
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
-
-
-
 }
-
-
 
 .button1{
     border-radius: 50%;
@@ -64,53 +59,52 @@ img{
 
 #easy{
     order: 1;
-    margin: auto;
-    padding: 50px;
+    margin: 20px auto;
+    padding: 30px 80px;
     background-color: #0E949E;
     border-radius: 50%;
 
-    -webkit-animation: glowing 1500ms infinite;
-    -moz-animation: glowing 1500ms infinite;
-    -o-animation: glowing 1500ms infinite;
-    animation: glowing 1500ms infinite;
+    -webkit-animation: glowing 2500ms infinite;
+    -moz-animation: glowing 2500ms infinite;
+    -o-animation: glowing 2500ms infinite;
+    animation: glowing 2500ms infinite;
 }
-
 
 @-webkit-keyframes glowing {
     0% { background-color:  #146469; -webkit-border-radius: 0 0 3px #146469; }
     50% { background-color: #0E949E; -webkit-box-shadow: 0 0 10px #0E949E; }
     100% { background-color: #146469; -webkit-box-shadow: 0 0 3px  #146469; }
-  }
-  
-  @-moz-keyframes glowing {
+}
+
+@-moz-keyframes glowing {
     0% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
     50% { background-color:#0E949E; -moz-box-shadow: 0 0 40px #0E949E;; }
     100% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
-  }
+}
   
-  @-o-keyframes glowing {
+@-o-keyframes glowing {
     0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
     50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
     100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
-  }
-  
-  @keyframes glowing {
+}
+
+@keyframes glowing {
     0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
     50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
     100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
-  }
+}
 
 
 #medium{
     order: 2;
-    margin: auto;
-    padding: 50px;
+    margin: 10px auto;
+    padding: 30px 80px;
 }
 
 #hard{
     order: 3;
-    margin: auto;
-    padding: 50px;
+    margin: 5px auto;    
+    padding: 30px 80px;
 }
 
 a{
