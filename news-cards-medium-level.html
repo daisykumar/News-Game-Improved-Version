@@ -5,8 +5,10 @@
     <title>Real and Fake News</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <link rel="stylesheet" href="news_cards.css">
 </head>
 <header>
@@ -18,117 +20,140 @@
 </header>
 <body>
     <p id="level1">MEDIUM LEVEL 2</p>
-    <p id="Flip">Tap and hold to <em>Flip Over</em> News Cards for answers</p>
+    <p id="Flip">Use the buttons on the News Cards to flip for answers</p>
     
     <div class="wrapper">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image4" src="./Images/image7.png" alt="Hillary and Kerry" style="width:100%;height:100%;">
+        <div class="f1_container">
+            <div class="shadow f1_card" id="flip-card7">
+                <div class="front face">
+                    <img id="image7" src="./Images/image7.png" alt="Hillary and Kerry" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back7">flip</button>
                 </div>
-                <div class="flip-card-back">
-                    <p id="fake"><b>Fake</b>
-                        <br></br>
+                <div class="back face center">
+                    <p id="fake">
+                        <br><br>
+                        <b>Fake</b>
+                        <br>
                         Do you know that?...
                         Everything about Baltimore Gazette site is a hallmark of a hastily thrown-together hoax site: several of the news topic sections are merely placeholders with no content, and the physical address provided in the “contact us” section is a non-existent one.
-                    <br><br>
-                            <b>Fact Check Source:</b>
-                            <a>https://www.snopes.com/fact-check/clinton-kerry-nominated-for-nobel-peace-prize/</a>
+                        <br><br>
+
+                        <a id="link" href="https://www.snopes.com/fact-check/clinton-kerry-nominated-for-nobel-peace-prize/" target="_blank"><b>Fact Check Source</b></a>
+                        
                     </p>
+                    <button id="flip-card-btn-turn-to-front7">flip</button>
                 </div>
             </div>
         </div>
 
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image5" src="./Images/image8.png" alt="Apirl Fool's Day" style="width:100%;height:100%;">
+        <div class="f1_container">
+            <div class="shadow f1_card" id="flip-card8">
+                <div class="front face">
+                    <img id="image8" src="./Images/image8.png" alt="Erna Solberg Speaks" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back8">flip</button>
                 </div>
-                <div class="flip-card-back true">
-                    <p id="true"><span><b>True</b></span>
+                <div class="back face center">
+                    <p id="true">
                         <br><br>
+                        <span><b>True</b></span>
                         <b>Origin</b>
                         This is all over in Norwegian news media that the authorites are working towards preventing to intensify the spread of ongoing pandemic, COVID-19.
                         <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://www.nrk.no/norge/julerad-fra-statsministeren_-_-for-to-av-dagene-apner-vi-for-inntil-ti-gjester-1.15270025</a>
+
+                        <a id="link" href="https://www.nrk.no/norge/julerad-fra-statsministeren_-_-for-to-av-dagene-apner-vi-for-inntil-ti-gjester-1.15270025" target="_blank"><b>Fact Check Source</b></a>
+
                     </p>
+                    <button id="flip-card-btn-turn-to-front8">flip</button>
                 </div>
             </div>
         </div>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image5" src="./Images/image9.png" alt="Giuliani speaks" style="width:100%;height:100%;">
+        <div class="f1_container">
+            <div class="shadow f1_card" id="flip-card9">
+                <div class="front face">
+                    <img id="image9" src="./Images/image9.png" alt="Giuliani speaks" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back9">flip</button>
                 </div>
-                <div class="flip-card-back true">
-                    <p id="true"><span><b>True</b></span>
+                <div class="back face center">
+                    <p id="true">
                         <br><br>
+                        <span><b>True</b></span>
                         <b>This is a real news article</b>
                         "When you tell me that, you know, he should testify because he's going to tell the truth and he shouldn't worry, well, that's so silly because it's somebody's version of the truth. Not the truth," Giuliani told NBC's Chuck Todd on Sunday morning during "Meet the Press."
                         <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://edition.cnn.com/2018/08/19/politics/rudy-giuliani-truth-isnt-truth/index.html</a>
+
+                        <a id="link" href="https://edition.cnn.com/2018/08/19/politics/rudy-giuliani-truth-isnt-truth/index.html" target="_blank"><b>Fact Check Source</b></a>
                     </p>
+                    <button id="flip-card-btn-turn-to-front9">flip</button>
                 </div>
             </div>
         </div>
 
-        <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img id="image4" src="./Images/image10.png" alt="Trump hires illegal immigrants" style="width:100%;height:100%;">
+        <div class="f1_container">
+                <div class="shadow f1_card" id="flip-card10">
+                    <div class="front face">
+                        <img id="image10" src="./Images/image10.png" alt="Trump hires illegal immigrants" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back10">flip</button>
                     </div>
-                    <div class="flip-card-back">
-                        <p id="fake"><b>Fake</b>
-                            <br></br>
-                        <b>Sorry! That’s fake news</b>
-                            The source is from Empirenews website which is a satire site. 
+                    <div class="back face center">
+                        <p id="fake">
+                            <br><br>
+                            <b>Fake</b>
+                            <br>
+                            <b>Sorry! That’s fake news</b>
+                            The source is from Empirenews website which is a satire site.
 
                             <b>Note</b> that words like “fake news struck again”, “you’re all buying it” reads like a parody.
-                        <br><br>
-                                <b>Fact Check Source:</b>
-                                <a>http://empirenews.net/breaking-donald-trump-secretly-hired-illegal-immigrants-to-start-building-border-wall/</a>
+                            <br><br>
+
+
+                            <a id="link" href="http://empirenews.net/breaking-donald-trump-secretly-hired-illegal-immigrants-to-start-building-border-wall/" target="_blank"><b>Fact Check Source</b></a>
+                            
                         </p>
+                        <button id="flip-card-btn-turn-to-front10">flip</button>
                     </div>
                 </div>
         </div>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image5" src="./Images/image11.png" alt="Google 'idiot' and get Trump" style="width:100%;height:100%;">
+        <div class="f1_container">
+            <div class="shadow f1_card" id="flip-card11">
+                <div class="front face">
+                    <img id="image11" src="./Images/image11.png" alt="Google 'idiot' and get Trump" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back11">flip</button>
                 </div>
-                <div class="flip-card-back true">
-                    <p id="true"><span><b>True</b></span>
+                <div class="back face center">
+                    <p id="true">
                         <br><br>
+                        <span><b>True</b></span>
                         The Guardian is a British left-leaning newspaper that follows the fact-based reporting.
 
                         These search results may change today but the article is <b>a useful lesson </b>about search results can be manipulated.
-                        <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://www.theguardian.com/us-news/2018/jul/17/trump-idiot-google-images-search</a>
+
+
+                        <a id="link" href="https://www.theguardian.com/us-news/2018/jul/17/trump-idiot-google-images-search" target="_blank"><b>Fact Check Source</b></a>
+                        
+
                     </p>
+                    <button id="flip-card-btn-turn-to-front11">flip</button>
                 </div>
             </div>
         </div>
 
 
-                <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img id="image4" src="./Images/image12.png" alt="Tourism News" style="width:100%;height:100%;">
+                <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card12">
+                            <div class="front face">
+                                <img id="image12" src="./Images/image12.png" alt="Covid vaccine" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back12">flip</button>
                             </div>
-                            <div class="flip-card-back">
-                                <p id="fake"><b>Fake</b>
-                                    <br></br>
+                            <div class="back face center">
+                                <p id="fake">
+                                    <br><br>
+
+                                    <b>Fake</b>
+                                    <br>
                                     The story was sourced from a blog called 'Health and Money News' and referenced statements made by Michael Yeadon, who is not the head of Pfizer research. Yeadon did work for Pfizer but left the company in 2011, according to his biographical information in the blog “Lockdown Sceptics,” to which Yeadon has contributed.
-                                <br><br>
-                                        <b>Fact Check Source:</b>
-                                        <a>https://www.forbes.com/sites/davidnikel/2019/06/26/norway-tourism-bosses-slammed-for-fake-news-pr-stunt/?sh=5770ccbb411d</a>
+                                    <br><br>
+
+                                    <a id="link" href="https://www.forbes.com/sites/davidnikel/2019/06/26/norway-tourism-bosses-slammed-for-fake-news-pr-stunt/?sh=5770ccbb411d" target="_blank"><b>Fact Check Source</b></a>
+                        
                                 </p>
+                                <button id="flip-card-btn-turn-to-front12">flip</button>
                             </div>
                         </div>
                     </div>
@@ -139,6 +164,6 @@
     <a href="home.html"><button id="mid">HARD</button></a>
 </div>
 
-<script src="app.js"></script>
+<script src="medium.js"></script>
 </body>
 </html>

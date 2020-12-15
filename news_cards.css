@@ -1,217 +1,471 @@
 
 html, body{
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body{
-    background-color: rgb(238, 237, 237);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-    margin: 0px 20px;
-    padding: 0px;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-.logo img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#level1{
-  font-size: 1.5em;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-#Flip{
-  font-size: 1em;
-}
-a{
-  color: blue;
-  text-transform: underline;
-  cursor: pointer;
-  font-size: 10px;
-}
-
-
-.flip-card {
-    background-color: transparent;
-    width: 480px;
-    height: 280px;
-    perspective: 1000px;
-    margin: 20px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1.0s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-  
-.flip-card:active .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    box-shadow: -5px 5px 5px #aaa;
-}
-  
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-  
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-}
-
-  
-.flip-card-back {
-    background-color: #EBD444;
-    color: #292828;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .flip-card-back.true{
-    background-color: #2DEB8D;
-  }
-
-#true{
-  padding: 0px;
-  margin: 2px;
-  font-size: 16px;
-}
-span{
-  color: #DA6959;
-  font-size: 20px
-}
-#fake{
-  padding: 0px;
-  margin: 2px;
-  color: #3c3a3a;
-  font-size: 16px;
-}
-
-#rock, #luck{
-  padding: 0px;
-  margin: 0px;
-  font-size: 1px;
-}
-#luck{
-  color: #746f6f;
-}
-#button-medium{
+  background-color: rgb(238, 237, 237);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: 2px;
+  margin: 0px 20px;
+  padding: 0px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#level1{
+font-size: 1.5em;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+
+.f1_container {
+  position: relative;
+  margin: 20px;
+  width: 480px;
+  height: 280px;
+  z-index: 1;
+  float: left;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+.f1_container {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+
+.f1_card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+
+.f1_container.active .f1_card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.face.back {
+      display: block;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      color: #292828;
+      text-align: center;
+      background-color: #EBD444;
+}
+
+
+.do-flip {
+  -o-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+
+#flip-card-btn-turn-to-back1, #flip-card-btn-turn-to-front1 {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(44, 42, 42);
+  cursor: pointer;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: .7em;
+  padding: 0;
+  color: rgb(252, 252, 252);
+  border: none;
+  backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+  box-shadow: 1px 1px 10px white;
+}
+
+
+#flip-card-btn-turn-to-back2, #flip-card-btn-turn-to-front2 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color: rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+box-shadow: 1px 1px 10px white;
+}
+
+#flip-card-btn-turn-to-back3, #flip-card-btn-turn-to-front3 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back4, #flip-card-btn-turn-to-front4 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back5, #flip-card-btn-turn-to-front5 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back6, #flip-card-btn-turn-to-front6 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back7, #flip-card-btn-turn-to-front7 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back8, #flip-card-btn-turn-to-front8 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back9, #flip-card-btn-turn-to-front9 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back10, #flip-card-btn-turn-to-front10 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back11, #flip-card-btn-turn-to-front11 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background-color:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#flip-card-btn-turn-to-back12, #flip-card-btn-turn-to-front12 {
+position: absolute;
+top: 8px;
+right: 8px;
+width: 40px;
+height: 40px;
+background:  rgb(44, 42, 42);
+cursor: pointer;
+visibility: hidden;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+font-size: .7em;
+padding: 0;
+color: rgb(252, 252, 252);
+border: none;
+box-shadow: 1px 1px 10px white;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+
+#true{
+padding: 0px;
+margin: 0px;
+color: #3c3a3a;
+font-size: 16px;
+height: 44vh;
+background-color: #2DEB8D;
+display: flex;
+flex-direction: column;
+
+}
+
+span{
+color: #DA6959;
+font-size: 20px
+}
+#fake{
+padding: 0px;
+margin: 0px;
+color: #3c3a3a;
+font-size: 16px;
+height: 44vh;
+}
+
+#rock, #luck{
+padding: 0px;
+margin: 0px;
+font-size: 1px;
+}
+#luck{
+color: #746f6f;
+}
+#button-medium{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 #mid{
-  font-size: 1.5em;
+font-size: 1.5em;
 }
 
 
 button{
-  width: 250px;
-  height: 70px;
-  color: #ffffff;
-  padding: 15px 10px;
-  margin: 10px 0px 50px 0px;
-  border-radius: 50%;
-  background-color: #0E949E;
-  font-weight: medium;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 5px #0E949E;
-  letter-spacing: 2.5px;
+width: 250px;
+height: 70px;
+color: #ffffff;
+padding: 15px 10px;
+margin: 10px 0px 50px 0px;
+border-radius: 50%;
+background-color: #0E949E;
+font-weight:600;
+font-size: 1.2em;
+border: none;
+cursor: pointer;
+text-transform: uppercase;
+box-shadow: 2px 2px 5px #0E949E;
+letter-spacing: 2.5px;
 
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+-webkit-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-transition-property: transform;
+transition-property: transform;
 
-  -webkit-animation: glowing 2500ms infinite;
-    -moz-animation: glowing 2500ms infinite;
-    -o-animation: glowing 2500ms infinite;
-    animation: glowing 2500ms infinite;
+}
 
+#easy{
+-webkit-animation: glowing 2500ms infinite;
+-moz-animation: glowing 2500ms infinite;
+-o-animation: glowing 2500ms infinite;
+animation: glowing 2500ms infinite;
 }
 
 
 @-webkit-keyframes glowing {
-  0% { background-color:  #146469; -webkit-border-radius: 0 0 3px #146469; }
-  50% { background-color: #0E949E; -webkit-box-shadow: 0 0 10px #0E949E; }
-  100% { background-color: #146469; -webkit-box-shadow: 0 0 3px  #146469; }
+0% { background-color:  #146469; -webkit-border-radius: 0 0 3px #146469; }
+50% { background-color: #0E949E; -webkit-box-shadow: 0 0 10px #0E949E; }
+100% { background-color: #146469; -webkit-box-shadow: 0 0 3px  #146469; }
 }
 
 @-moz-keyframes glowing {
-  0% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
-  50% { background-color:#0E949E; -moz-box-shadow: 0 0 40px #0E949E;; }
-  100% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
+0% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
+50% { background-color:#0E949E; -moz-box-shadow: 0 0 40px #0E949E; }
+100% { background-color: #146469; -moz-box-shadow: 0 0 3px #146469; }
 }
 
 @-o-keyframes glowing {
-  0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
-  50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
-  100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
+100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
 }
 
 @keyframes glowing {
-  0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
-  50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
-  100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+0% { background-color: #146469; box-shadow: 0 0 3px #146469; }
+50% { background-color: #0E949E; box-shadow: 0 0 40px #0E949E; }
+100% { background-color: #146469; box-shadow: 0 0 3px #146469; }
 }
 
 
 a{
-  text-decoration: none;
+text-decoration: none;
 }
 button:hover, button:focus, button:active{
-  background-color: #146469;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+background-color: #146469;
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
 }
 
 @media (max-width: 500px) {
 
-  .flip-card{
-    width: 440px;
-  }
+.flip-card{
+  width: 440px;
+}
 
 }
 /* Website Version*/
 
 @media (min-width: 900px) {
-  .wrapper { 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-  }
+.wrapper { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
 
 }
+
+
+
+
+
+
+
+

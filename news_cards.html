@@ -6,138 +6,166 @@
     <title>Real and Fake News</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="news_cards.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+            <link rel="stylesheet" href="news_cards.css">
 </head>
-<header>
-                    <nav>
-                        <div class="logo">
-                            <a href="home.html"><img src="./Images/Logo (4).png" alt="logo" style="width: 30%"></a>
-            </div>
-        </nav>
+            <header>
+                <nav>
+                    <div class="logo">
+                        <a href="home.html"><img src="./Images/Logo (4).png" alt="logo" style="width: 30%"></a>
+                </div>
+            </nav>
 </header>
-<body>
-    <p id="level1">EASY LEVEL 1</p>
-    <p id="Flip">Tap and hold to <em>Flip Over</em> News Cards for answers</p>
-    
-    <div class="wrapper">
+            <body>
+                <p id="level1">EASY LEVEL 1</p>
+                <p id="Flip">Use the buttons on the News Cards to flip for answers</p>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image1" src="./Images/image1.png" alt="Greta Thunberg" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back">
-                    <p id="fake"><b>Fake</b><br>
-                    In December 2019, a video supposedly showing teenage environmental activist Greta Thunberg shooting a gun started circulating on social media. This video, however, does not show the 16-year-old Swedish girl but rather a Twitter user named “Emmy.”
-                    <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://observers.france24.com/en/20191212-debunked-not-greta-thunberg-firing-machine-gun</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+                <div class="wrapper">
 
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card1">
+                            <div class="front face">
+                                <img id="image1" src="./Images/image1.png" alt="Greta Thunberg" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back1">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="fake">
+                                    <br><br>
+                                    <b>Fake</b><br>
+                                    In December 2019, a video supposedly showing teenage environmental activist Greta Thunberg shooting a gun started circulating on social media. This video, however, does not show the 16-year-old Swedish girl but rather a Twitter user named “Emmy.”
+                                    <br><br>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image2" src="./Images/image2.png" alt="Namaki" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back">
-                    <p id="fake"><b>Fake</b>
-                        <br>
-                        During the session Namaki said: "To get an idea of how much pressure our colleagues are under, just look at this photo. It's the image of a colleague, one of my sisters, an image that was sent to me from one of our hospitals."
-                        However, it was a Brazil nurse's pic, Amanda Ramalho.
-                    <br><br>
-                            <b>Fact Check Source:</b>
-                            <a>https://observers.france24.com/en/20200415-iran-health-minister-medical-team-brazilian-nurse</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image3" src="./Images/image3.png" alt="Trump and Canadian minister" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back true">
-                    <p id="true"><span><b>True</b></span>
-                        <br></br>
-                        <b>Origin</b>
-                        <br></br>
-                        This is a real news article published in CNN.COM. Click on the Fact Check Source to verify the source and links to the original video.
-                        <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://edition.cnn.com/2018/03/15/politics/trump-trudeau-trade-meeting/index.html</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image4" src="./Images/image4.png" alt="Tourism News" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back">
-                    <p id="fake"><b>Fake</b>
-                        <br></br>
-                        Update: After this publication, as anticipated in the article, it was confirmed that the proposal had been a publicity stunt to promote tourism.
-                    <br><br>
-                            <b>Fact Check Source:</b>
-                            <a>https://www.forbes.com/sites/davidnikel/2019/06/26/norway-tourism-bosses-slammed-for-fake-news-pr-stunt/?sh=5770ccbb411d</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image5" src="./Images/image5.png" alt="Apirl Fool's Day" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back true">
-                    <p id="true"><span><b>True</b></span>
-                        <br><br>
-                        <b>Origin</b>
-                        Bergens Tidende drops traditional April Fools’ Day joke for fear of ‘fake news’ stamp.
-
-                        Bergens Tidende skips the annual April Fools’ Day joke. The debate around false news means that the media house is afraid to gamble with their credibility.
-                        <br><br>
-                        <b>Fact Check Source:</b>
-                        <a>https://norwaytoday.info/news/fake-news-forces-norwegian-media-drop-april-fools-day-jokes-rampant/</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img id="image6" src="./Images/image6.png" alt="Trump distributes marshmallows" style="width:100%;height:100%;">
-                </div>
-                <div class="flip-card-back">
-                    <p id="fake"><b>Fake</b>
-                        <br></br>
-                        Did you notice...
-                        <br></br>
-                        The details like ‘kids making “S’more” out of the smouldering coals of their burnt homes’ is a satire. InitialReactionTime is a satire site.
-                        <br><br>
-                            <b>Fact Check Source:</b>
-                            <a>http://www.initialreactionnews.com/</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+                                    <a id="link" href="https://observers.france24.com/en/20191212-debunked-not-greta-thunberg-firing-machine-gun" target="_blank"><b>Fact Check Source</b></a>
+                                </p>
+                                  <button id="flip-card-btn-turn-to-front1">flip</button>
+                            </div>
+                        </div>
+                    </div>
 
 
-    </div>
-    <div id="button-medium">
-        <a href="news-cards-medium-level.html"><button id="mid">Medium</button></a>
-    </div>
-    <script src="app.js"></script>
-</body>
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card2">
+                            <div class="front face">
+                                <img id="image2" src="./Images/image2.png" alt="Namaki" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back2">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="fake">
+                                    <br><br>
+
+                                    <b>Fake</b>
+                                    <br>
+                                    During the session Namaki said: "To get an idea of how much pressure our colleagues are under, just look at this photo. It's the image of a colleague, one of my sisters, an image that was sent to me from one of our hospitals."
+                                    However, it was a Brazil nurse's pic, Amanda Ramalho.
+                                    <br><br>
+
+                                    <a id="link" href="https://observers.france24.com/en/20200415-iran-health-minister-medical-team-brazilian-nurse" target="_blank"><b>Fact Check Source</b></a>
+                                </p>
+                                <button id="flip-card-btn-turn-to-front2">flip</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card3">
+                            <div class="front face">
+                                <img id="image3" src="./Images/image3.png" alt="Trump and Canadian minister" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back3">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="true">
+                                    <br><br>
+
+                                    <span><b>True</b></span>
+
+                                    <b>Origin</b>
+                                    This is a real news article published in CNN.COM. Click on the Fact Check Source to verify the source and links to the original video.
+                                    <br><br>
+
+                                    <a id="link" href="https://edition.cnn.com/2018/03/15/politics/trump-trudeau-trade-meeting/index.html" target="_blank"><b>Fact Check Source</b></a>
+                                    
+                                </p>
+                                <button id="flip-card-btn-turn-to-front3">flip</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card4">
+                            <div class="front face">
+                                <img id="image4" src="./Images/image4.png" alt="Tourism News" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back4">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="fake">
+                                    <br><br>
+
+                                    <b>Fake</b>
+                                    <br>
+                                    <b>Do you know?</b> After this publication, as anticipated in the article, it was confirmed that the proposal had been a publicity stunt to promote tourism.
+                                    <br><br>
+                                    
+                                    <a id="link" href="https://www.forbes.com/sites/davidnikel/2019/06/26/norway-tourism-bosses-slammed-for-fake-news-pr-stunt/?sh=5770ccbb411d" target="_blank"><b>Fact Check Source</b></a>
+                                
+                                </p>
+                                <button id="flip-card-btn-turn-to-front4">flip</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card5">
+                            <div class="front face">
+                                <img id="image5" src="./Images/image5.png" alt="Apirl Fool's Day" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back5">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="true">
+                                    <br><br>
+
+                                    <span><b>True</b></span>
+                                    <b>Origin</b>
+                                    Bergens Tidende drops traditional April Fools’ Day joke for fear of ‘fake news’ stamp.
+
+                                    Bergens Tidende skips the annual April Fools’ Day joke. The debate around false news means that the media house is afraid to gamble with their credibility.
+                                    <br><br>
+
+                                
+                                    <a id="link" href="https://norwaytoday.info/news/fake-news-forces-norwegian-media-drop-april-fools-day-jokes-rampant/" target="_blank"><b>Fact Check Source</b></a>
+
+                                </p>
+                                <button id="flip-card-btn-turn-to-front5">flip</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f1_container">
+                        <div class="shadow f1_card" id="flip-card6">
+                            <div class="front face">
+                                <img id="image6" src="./Images/image6.png" alt="Trump distributes marshmallows" style="width:100%;height:100%;"><button id="flip-card-btn-turn-to-back6">flip</button>
+                            </div>
+                            <div class="back face center">
+                                <p id="fake">
+                                    <br><br>
+                                    <b>Fake</b>
+                                    <br>
+                                    <b>Did you notice...</b>
+                                    <br>
+                                    The details like ‘kids making “S’more” out of the smouldering coals of their burnt homes’ is a satire. InitialReactionTime is a satire site.
+                                    <br>
+                                    <a id="link" href="http://www.initialreactionnews.com/" target="_blank"><b>Fact Check Source</b></a>
+
+                                    <a></a>
+                                </p>
+                                <button id="flip-card-btn-turn-to-front6">flip</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="button-medium">
+                    <a href="news-cards-medium-level.html"><button id="mid">Medium</button></a>
+                </div>
+
+                <script src="easy.js"></script>
+            </body>
 </html>
